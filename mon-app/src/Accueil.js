@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import Article from './components/Articles';
 
 class Accueil extends Component {
@@ -20,7 +21,11 @@ class Accueil extends Component {
     return (
       <>
       <h1>My articles</h1>
-       {this.state.articles.data && this.state.articles.data.map((articles,i)=><Article article={articles} key={i} />)}
+      <Container>
+        <Row>
+            {this.state.articles.data && this.state.articles.data.map((articles,i)=><Article article={articles} key={i} />)}
+        </Row>
+      </Container>
       </>
     );
   }
