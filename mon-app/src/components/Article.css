@@ -9,6 +9,7 @@
     height: 2px;;
     background-color: black ;
     opacity: 1;
+    width: auto;
 }
 #cardbody{
     padding: 0px;
