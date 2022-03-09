@@ -19,9 +19,9 @@ class App extends Component {
   };
 
   componentDidMount = () => {
-    console.log(localStorage.getItem("cart"))
+    const cart = localStorage.getItem("cart")
     if (localStorage.getItem("cart") !=null)
-    this.setState({cart:localStorage.getItem})
+    this.setState({cart:cart})
   }
 
 

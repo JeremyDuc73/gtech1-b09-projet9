@@ -1,0 +1,68 @@
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1365px !important;
+}
+
+#navabar{
+    padding: 0 !important;
+}
+#home {
+    color: #212529 !important;
+    text-decoration: none !important;
+    padding: 0.5rem;
+    border: 2px !important;
+}
+#home:hover{
+    background-color: #e6e8eb !important;
+}
+
+#EZPC {
+    color: #212529 !important;
+    text-decoration: none !important;
+    height: auto !important;
+    font-size: 50px;
+    padding: 0;
+    padding-right: 50px;
+}
+
+#itemDrop  {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-size: 30px;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+#itemDrop:hover  {
+    background-color: #e6e8eb !important;
+}
+
+.me-auto{
+    font-size: 40px !important;
+    color: #212529 !important;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #212529 !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    background-color: #e6e8eb !important;
+}
+
+#containernavbar{
+    margin-left: 10px !important;
+}
+
+Nav hr{
+    height: 50px !important;
+    color: #212529;
+    width: 3px !important;
+    opacity: 1;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Article from './components/Articles';
+import Menu from './components/Menu';
 
 class Products extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class Products extends Component {
     console.log(this.state.articles);
     return (
       <>
+      <Menu/>
       <h1>My articles</h1>
       <Container>
         <Row>

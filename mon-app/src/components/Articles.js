@@ -1,4 +1,4 @@
-import { Card,Button,Row,Container,Col } from 'react-bootstrap';
+import { Card,Button,Row,Container } from 'react-bootstrap';
 import './Article.css'
 
 function Article(props){
@@ -18,8 +18,8 @@ function Article(props){
               {props.article.attributes.price}€
             </Card.Text>
             <Row>
-              <Button id='ItemButton' variant="primary">ADD TO CART</Button>
-              <Button id='ItemButton' variant="primary">GO TO PAGE</Button>
+              <Button onClick={localStorage.setItem('article',props.article.attributes)} id='ItemButton' variant="primary">ADD TO CART</Button>
+              {/* <Button id='ItemButton' variant="primary">GO TO PAGE</Button> */}
             </Row>
           </Container>
         </Card.Body>
