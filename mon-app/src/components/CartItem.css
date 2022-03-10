@@ -1,0 +1,52 @@
+#ItemCard{
+    background-color: #CACACA;
+    padding: 20px;
+    margin: 20px;
+
+}
+
+#ItemCard hr{
+    height: 2px;;
+    background-color: black ;
+    opacity: 1;
+    width: auto;
+}
+#cardbody{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#itemtitle{
+    font-style: bold;
+    font-size: 30px;
+}
+
+#itemdescription{
+    font-size: 15px;
+}
+
+#itembottom{
+    padding: 0;
+}
+
+#itemprice{
+    font-size: 35px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+#ItemButton{
+    font-size: 25px;
+    width: auto;
+    margin: 10px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items:flex-end;
+    background-color: #014396;
+    border: none;
+}

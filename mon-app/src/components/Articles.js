@@ -18,8 +18,7 @@ function Article(props){
               {props.article.attributes.price}€
             </Card.Text>
             <Row>
-              <Button onClick={localStorage.setItem('article',props.article.attributes)} id='ItemButton' variant="primary">ADD TO CART</Button>
-              {/* <Button id='ItemButton' variant="primary">GO TO PAGE</Button> */}
+              <Button onClick={()=>props.setItemCart(props.article.attributes)} id='ItemButton' variant="primary">ADD TO CART</Button>
             </Row>
           </Container>
         </Card.Body>

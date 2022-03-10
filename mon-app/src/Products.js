@@ -1,33 +1,63 @@
 import React, { Component } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Button, Container, Dropdown, Row } from 'react-bootstrap';
 import Article from './components/Articles';
+import './Products.css'
 import Menu from './components/Menu';
+import ModalCart from './components/ModalCart'
+import ScrollToTop from "react-scroll-to-top";
+import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 
 class Products extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles : []
+      articles : [],
+      types : [],
+      filter : ""
     }
   }
   async componentDidMount() {
-    //generalement utilisé pour les appels réseaux
     const response = await fetch('http://localhost:1337/api/articles?populate=*', {method: 'GET', headers: {'Accept': 'application/json', 'Content-Type':'application/json'}})
     const articles = await response.json()
     this.setState({articles:articles})
-    
   }
+
+  changefilter(filtre){
+    this.setState({filter:filtre})
+  }  
+
   render() {
-    console.log(this.state.articles);
+    let wui = this.state.articles.data;
+    if(this.state.filter!=""){
+      wui=wui.filter(article=>article.attributes.type.data.attributes.Type===this.state.filter)}
     return (
       <>
       <Menu/>
-      <h1>My articles</h1>
+      <h2 id='titleh2'>My articles</h2>
+          <ModalCart
+            cart= {this.props.cart}
+            id='Modal'
+          /> 
+          <Dropdown id='filters'>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Filters
+            </Dropdown.Toggle>
+            <DropdownMenu>
+              <Button onClick={()=>{this.changefilter("")}}>All</Button>
+              <Button onClick={()=>{this.changefilter("Graphic card")}}>Graphic card</Button>
+              <Button onClick={()=>{this.changefilter("Processor")}}>Processor</Button>
+              <Button onClick={()=>{this.changefilter("Supply")}}>Power supply</Button>
+              <Button onClick={()=>{this.changefilter("Motherboard")}}>Mother board</Button>
+              <Button onClick={()=>{this.changefilter("Computer Case")}}>Computer case</Button>
+            </DropdownMenu>
+          </Dropdown>
       <Container>
         <Row>
-            {this.state.articles.data && this.state.articles.data.map((articles,i)=><Article article={articles} key={i} />)}
+            {wui && wui.map((articles,i)=><Article article={articles} cart={this.props.cart} setItemCart={this.props.setItemCart} key={i} />)}
         </Row>
       </Container>
+      <ScrollToTop smooth />
+
       </>
     );
   }

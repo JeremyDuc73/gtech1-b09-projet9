@@ -1,0 +1,41 @@
+#titleh2 {
+    color: white;
+    display: flex;
+    margin-top: 30px;
+    font-size: 120px;
+    justify-content: center;
+}
+
+#filters{
+    margin-left: 5%;
+    width: 100px;
+}
+
+
+
+#dropdown-basic{
+    padding: 10px;
+    font-size: 30px;
+    background-color: #0d6efd;
+    border: 0;
+
+}
+
+#dropdown-basic:hover{
+    background-color: #397ad9;
+    border: 0;
+}
+
+.dropdown-menu.show{
+    display: flex !important;
+    flex-direction: column;
+    padding: 3px;
+    background-color: #CACACA !important;
+}
+
+.dropdown-menu .btn {
+    background-color: #0d6efd !important;
+    color: white !important;
+    border: 0 !important;
+    margin: 2px;
+}

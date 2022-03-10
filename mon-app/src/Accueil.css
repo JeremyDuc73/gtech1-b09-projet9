@@ -2,7 +2,9 @@
     background-color: #CACACA;
     font-size: 30px;
     padding: 30px;
-    margin: 100px;
+    margin: 150px;
+    margin-left: 200px;
+    margin-right: 200px;
     border-radius: 30px;
 }
 
@@ -15,6 +17,17 @@
 
 #linkproduct{
     color: #CACACA;
-    /* padding: 0; A FAIRE */
+    width: auto !important;
+    font-size: 30px;
     text-decoration: none;
+    background-color: #0d6efd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 20px;
+}
+
+#linkproduct:hover{
+    background-color: #397ad9;
 }

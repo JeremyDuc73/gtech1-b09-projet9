@@ -1,4 +1,4 @@
-import { Card,Button,Row,Container } from 'react-bootstrap';
+import { Card,Container } from 'react-bootstrap';
 import './CartItem.css'
 
 function CartItem(props){
@@ -6,21 +6,17 @@ function CartItem(props){
   return (
     <>
       <Card id='ItemCard' style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={"http://localhost:1337"+(props.article.attributes.img.data && props.article.attributes.img.data.attributes.url)} />
+        <Card.Img variant="top" src={"http://localhost:1337"+(props.element.img.data && props.element.img.data.attributes.url)} />
         <hr></hr>
         <Card.Body id='cardbody'>
-          <Card.Title id='itemtitle'>{props.article.attributes.name}</Card.Title>
+          <Card.Title id='itemtitle'>{props.element.name}</Card.Title>
           <Card.Text id='itemdescription'>
-            {props.article.attributes.description}
+            {props.element.description}
           </Card.Text>
           <Container id='itembottom'>
             <Card.Text id='itemprice'>
-              {props.article.attributes.price}€
+              {props.element.price}€
             </Card.Text>
-            <Row>
-              <Button onClick={localStorage.setItem('article',props.article.attributes)} id='ItemButton' variant="primary">ADD TO CART</Button>
-              {/* <Button id='ItemButton' variant="primary">GO TO PAGE</Button> */}
-            </Row>
           </Container>
         </Card.Body>
       </Card>
